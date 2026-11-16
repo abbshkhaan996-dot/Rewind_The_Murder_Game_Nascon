@@ -61,7 +61,7 @@ Normal case progress is stored in this browser's localStorage. The guided demo r
 One authored chapter. The room is real-time 3D cuboid geometry projected through Canvas 2D, with collision-based walking and basic jump/gravity. It is not WebGL or a Roblox Studio project. No shooting, multiplayer, voiceover or general rigid-body physics. Timeline changes are discrete reconstructed moments. The 30 fps rendering target depends on device performance. The Site's existing audience is preserved.
 
 ## Visual assets
-All required visuals are bundled under `dist/assets`. See ASSET_NOTES.md for provenance. The room and menu video use the original 3D scene. Photographic crops remain in the evidence inspection panels.
+All required visuals are bundled under `dist/assets`. The room and menu video use the original 3D scene. Photographic crops remain in the evidence inspection panels.
 
 To regenerate the bundled menu footage, install Node package `@napi-rs/canvas` and ffmpeg, then run `node scripts/render-menu.cjs`. These are build-time tools only; playing the game requires no installation. The MP4 uses H.264 at 960×540, 24 fps, eight seconds, with muted inline autoplay and a poster fallback. Reduce motion pauses the video.
 
