@@ -53,7 +53,7 @@ Run `node test-engine.cjs` and `node test-interface.cjs` with Node.js.
 
 Seven engine groups and nineteen interface/renderer groups passed. Additional checks cover keyboard/touch movement, desk/wall collision, jump/landing, clearing held inputs on pause, and menu-video playback controls. These cover timeline/mode gates, reachability of all evidence, duplicate prevention, incomplete/incorrect/valid connections, all accusation outcomes, reset, persistence, menus, camera handlers, inspection clicks versus dragging, finite drawing coordinates, and the nine-objective field demo. Demo tests verify real collection requirements, invalid deduction rejection, successful completion, repeat launch, early exit and restoration of the original save.
 
-JavaScript syntax checks passed. The supported browser QA tool was unavailable. These tests do not verify rendered pixels, actual device input, native focus behavior or audio output. No claim of live browser testing is made.
+JavaScript syntax checks passed. These tests do not verify rendered pixels, actual device input, native focus behavior or audio output. No claim of live browser testing is made.
 
 ## Save behavior and limitations
 Normal case progress is stored in this browser's localStorage. The guided demo runs in memory and does not overwrite that save. Exit restores the original in-memory case; refreshing during the demo reloads the original saved case. Restart clears normal case progress.
@@ -74,13 +74,4 @@ The lobby Play button opens a full-screen difficulty selector before entering th
 
 Each difficulty stores progress separately. Existing saves remain in Easy. Selecting a card does not change your active game until Enter is pressed. Returning to the lobby keeps progress. Training remains an isolated guided practice run and restores your current difficulty's case when exited.
 
-The new original lobby key art is `dist/assets/lobby-keyart.png`. A subtle video layer retains motion, with reduced-motion and pause controls. Automated checks cover selection, back navigation, independent saves and difficulty-specific guidance. Browser visual QA remains unavailable.
-
-## Lobby display fix
-Removed legacy direct-child positioning rules that collapsed the decorative artwork layer and placed the video in normal document flow. Background layers now use explicit absolute positioning, and the key art is preloaded. Stylesheet version changed to invalidate stale browser caches.
-
-## Homepage typography
-The top label is Gaming Hub; the Solo Adventure label is removed. Nimbus Sans is bundled locally as Hub Sans in regular and bold WOFF files. Restrained tracking, upright titles, a consistent type hierarchy and lighter menu weights replace the earlier Impact/skewed display treatment. No external font service is needed. License information is included in `dist/assets/fonts/LICENSE.txt`.
-
-### Office graphics update
-The main office uses WebGL with cast shadows, procedural materials and mixed warm/cool lighting. WebGL-disabled devices fall back to the Canvas renderer. GPU shader compilation and an offline OpenGL ES render were checked; browser visual QA remains unverified. Homepage Gaming Hub label is proportionate to the menu typography.
+The new original lobby key art is `dist/assets/lobby-keyart.png`. A subtle video layer retains motion, with reduced-motion and pause controls. Automated checks cover selection, back navigation, independent saves and difficulty-specific guidance.
